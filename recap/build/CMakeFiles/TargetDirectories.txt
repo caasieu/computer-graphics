@@ -1,0 +1,3 @@
+/home/caasieu/Documentos/graphics/recap/build/CMakeFiles/recap.dir
+/home/caasieu/Documentos/graphics/recap/build/CMakeFiles/edit_cache.dir
+/home/caasieu/Documentos/graphics/recap/build/CMakeFiles/rebuild_cache.dir
