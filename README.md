@@ -19,3 +19,18 @@ image processing and many more concepts... please be gentle lol!
 
 
 *testing environment Ubuntu 24.04 LTS, codename: noble*
+
+
+## Buffers em OpenGL
+
+Em OpenGL, um buffer é uma área de memória usada para armazenar dados relacionados à renderização de gráficos. Existem diferentes tipos de buffers, cada um com uma função específica:
+
+1. **Vertex Buffer (VBO)**: Armazena dados de vértices, como posições, cores, normais, etc., que são usados para desenhar formas geométricas.
+
+2. **Index Buffer (IBO ou EBO)**: Contém índices que apontam para os vértices no VBO, permitindo que você reutilize os mesmos vértices para desenhar formas complexas, como triângulos.
+
+3. **Frame Buffer**: Um buffer que armazena a imagem final ou intermediária que será mostrada na tela. Pode conter vários tipos de dados, como cores, profundidade e stencil.
+
+4. **Depth Buffer**: Usado para armazenar informações de profundidade de cada pixel, ajudando a determinar quais objetos estão na frente ou atrás na cena 3D.
+
+Em resumo, buffers em OpenGL são áreas de memória dedicadas para armazenar dados necessários para a renderização de gráficos, ajudando a organizar e otimizar o processo de desenho na tela.

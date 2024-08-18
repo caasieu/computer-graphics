@@ -1,16 +1,30 @@
+#include <iostream>
 #include <glad/glad.h>
+#include <sstream>
+#include <fstream>  
 
-class Shader {
+
+// A simple class i created to facilitate creating my shaders, programs for multiple objects
+class Shader
+{
 public:
     GLuint program;
-    Shader(const GLchar* vertexSource, const GLchar* fragmentSource) {
-        
-        GLuint vertex = this->createShader(vertexSource, GL_VERTEX_SHADER, "VERTEX");
-        GLuint fragment = this->createShader(fragmentSource, GL_FRAGMENT_SHADER, "FRAGMENT");
-        this->createProgram(vertex, fragment);
-        glUseProgram(this->program);
-    }   
+    Shader(const std::string &vPath, const std::string &fPath)
+    {
+        std::string vertexSource = this->loadSource(vPath);
+        std::string fragmentSource = this->loadSource(fPath);
 
+        GLuint vertex = this->createShader(vertexSource.c_str(), GL_VERTEX_SHADER, "VERTEX");
+        GLuint fragment = this->createShader(fragmentSource.c_str(), GL_FRAGMENT_SHADER, "FRAGMENT");
+        this->createProgram(vertex, fragment);
+
+    }
+
+    // loads the program containing the shaders into the opengl pipeline stages (onto the GPU)
+    void UseProgram()
+    {
+        glUseProgram(this->program);
+    }
 
 private:
     GLuint createShader(const GLchar *source, GLenum type, const GLchar *type_src)
@@ -25,12 +39,22 @@ private:
         return shader;
     }
 
-    GLuint createProgram(GLuint vertex, GLuint fragment) {
+    std::string loadSource(const std::string& path)
+    {
+        std::ifstream in(path);
+        std::stringstream buffer;
+        buffer << in.rdbuf();
+        return buffer.str();
+        
+    }
 
-	    this->program = glCreateProgram();
-	    glAttachShader(program, vertex);
-	    glAttachShader(program, fragment);
-	    glLinkProgram(program);
+    GLuint createProgram(GLuint vertex, GLuint fragment)
+    {
+
+        this->program = glCreateProgram();
+        glAttachShader(program, vertex);
+        glAttachShader(program, fragment);
+        glLinkProgram(program);
 
         this->checkLinkingErrors(program);
 
@@ -59,7 +83,7 @@ private:
         {
             glGetShaderInfoLog(shader, 1024, NULL, infoLog);
             std::cout << "ERROR::: " << type << "\n"
-                << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+                      << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
         }
     }
 };
