@@ -71,6 +71,8 @@ CMakeFiles/one.dir/glad.c.o: /home/caasieu/Documentos/graphics/one/glad.c \
   /usr/local/include/glad/glad.h
 
 CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
+  /home/caasieu/Documentos/graphics/one/include/KHR/khrplatform.h \
+  /home/caasieu/Documentos/graphics/one/include/glad/glad.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -261,9 +263,7 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-  /usr/local/include/KHR/khrplatform.h \
-  /usr/local/include/SOIL2/SOIL2.h \
-  /usr/local/include/glad/glad.h
+  /usr/local/include/SOIL2/SOIL2.h
 
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
@@ -305,10 +305,6 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 /usr/include/linux/errno.h:
 
 /usr/include/ctype.h:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/c++/13/type_traits:
 
 /usr/include/c++/13/string:
 
@@ -398,10 +394,6 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 
 /usr/include/strings.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/13/bits/ostream.tcc:
@@ -449,6 +441,12 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/c++/13/type_traits:
+
+/home/caasieu/Documentos/graphics/one/include/glad/glad.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
 
@@ -552,6 +550,12 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 
 /home/caasieu/Documentos/graphics/one/main.cpp:
 
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/home/caasieu/Documentos/graphics/one/include/KHR/khrplatform.h:
+
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
@@ -630,9 +634,9 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
-/usr/include/c++/13/bits/std_abs.h:
-
 /usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/postypes.h:
 

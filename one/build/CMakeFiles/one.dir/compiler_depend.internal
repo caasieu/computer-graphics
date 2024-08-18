@@ -73,6 +73,8 @@ CMakeFiles/one.dir/glad.c.o
 
 CMakeFiles/one.dir/main.cpp.o
  /home/caasieu/Documentos/graphics/one/main.cpp
+ /home/caasieu/Documentos/graphics/one/include/KHR/khrplatform.h
+ /home/caasieu/Documentos/graphics/one/include/glad/glad.h
  /usr/include/GLFW/glfw3.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
@@ -263,7 +265,5 @@ CMakeFiles/one.dir/main.cpp.o
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
- /usr/local/include/KHR/khrplatform.h
  /usr/local/include/SOIL2/SOIL2.h
- /usr/local/include/glad/glad.h
 
