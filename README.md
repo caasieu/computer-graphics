@@ -18,4 +18,4 @@ image processing and many more concepts... please be gentle lol!
 5. CMake for faster compiling and linking;
 
 
-*testing environment Ubuntu 24.04 LTS*
+*testing environment Ubuntu 24.04 LTS, codename: noble*
