@@ -16,3 +16,6 @@ image processing and many more concepts... please be gentle lol!
 3. GLM for mathematical equations and support;
 4. SOIL2 for Image loading and saving;
 5. CMake for faster compiling and linking;
+
+
+*testing environment Ubuntu 24.04 LTS*
