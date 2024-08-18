@@ -74,6 +74,7 @@ CMakeFiles/one.dir/glad.c.o
 CMakeFiles/one.dir/main.cpp.o
  /home/caasieu/Documentos/graphics/one/main.cpp
  /home/caasieu/Documentos/graphics/one/include/KHR/khrplatform.h
+ /home/caasieu/Documentos/graphics/one/include/classes/Shader.h
  /home/caasieu/Documentos/graphics/one/include/glad/glad.h
  /usr/include/GLFW/glfw3.h
  /usr/include/alloca.h

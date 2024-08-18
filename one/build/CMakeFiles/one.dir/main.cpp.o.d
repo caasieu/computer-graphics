@@ -155,4 +155,5 @@ CMakeFiles/one.dir/main.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /home/caasieu/Documentos/graphics/one/include/classes/Shader.h \
  /usr/include/GLFW/glfw3.h /usr/local/include/SOIL2/SOIL2.h

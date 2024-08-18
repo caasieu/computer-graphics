@@ -72,6 +72,7 @@ CMakeFiles/one.dir/glad.c.o: /home/caasieu/Documentos/graphics/one/glad.c \
 
 CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
   /home/caasieu/Documentos/graphics/one/include/KHR/khrplatform.h \
+  /home/caasieu/Documentos/graphics/one/include/classes/Shader.h \
   /home/caasieu/Documentos/graphics/one/include/glad/glad.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
@@ -346,6 +347,8 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 
 /usr/include/c++/13/clocale:
 
+/usr/include/c++/13/bits/stringfwd.h:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
@@ -381,10 +384,6 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/stdio.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -504,8 +503,6 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 
 /usr/include/c++/13/backward/binders.h:
 
-/usr/include/c++/13/bits/stringfwd.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /home/caasieu/Documentos/graphics/one/glad.c:
@@ -555,6 +552,12 @@ CMakeFiles/one.dir/main.cpp.o: /home/caasieu/Documentos/graphics/one/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /home/caasieu/Documentos/graphics/one/include/KHR/khrplatform.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/home/caasieu/Documentos/graphics/one/include/classes/Shader.h:
 
 /usr/include/asm-generic/errno-base.h:
 
