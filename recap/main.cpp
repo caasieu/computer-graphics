@@ -96,7 +96,7 @@ int main(int arc, char *argv[])
 		glDrawArrays(GL_POINTS, 0, 1);
 
 		pontinho2.UseProgram();
-		glDrawArrays(GL_TRIANGLES, 0, 1);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
