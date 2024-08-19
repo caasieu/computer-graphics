@@ -3,7 +3,7 @@
 #include "include/classes/Shader.h"
 #include <GLFW/glfw3.h>
 #include <SOIL2/SOIL2.h>
-#include <filesystem> 
+#include <filesystem>
 
 // HardCode a vertex shader
 #define numVAOs 1		 // Vertex Array Object
@@ -12,6 +12,20 @@ GLuint vao[numVAOs];
 GLuint vao2[numVAOs];
 
 using namespace std;
+
+bool checkOpenGLError()
+{
+	bool foundError = false;
+	int glErr = glGetError();
+	while (glErr != GL_NO_ERROR)
+	{
+		cout << "glError: " << glErr << endl;
+		foundError = true;
+		glErr = glGetError();
+	}
+
+	return foundError;
+}
 
 void init(GLFWwindow *window)
 {
@@ -25,7 +39,7 @@ void init(GLFWwindow *window)
 void display(GLFWwindow *window, double currentTime)
 {
 
-	glPointSize(30.0f);
+	glPointSize(120.0f);
 	glClearColor(0.0, 0.0, 0.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
@@ -35,7 +49,8 @@ int main(int arc, char *argv[])
 	GLFWwindow *window;
 
 	// initialize the library
-	if (!glfwInit()) exit(EXIT_FAILURE);
+	if (!glfwInit())
+		exit(EXIT_FAILURE);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
@@ -47,19 +62,18 @@ int main(int arc, char *argv[])
 	glfwMakeContextCurrent(window);
 
 	// Initialize glad
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+	{
 		cout << "failed to initialize glad" << endl;
 		exit(EXIT_FAILURE);
 	}
 
 	init(window);
 
+	// Get the current path of the project
+	std::filesystem::path current_path = std::filesystem::current_path();
+	std::filesystem::path parent_path = current_path.parent_path();
 
-
-    // Get the current path of the project
-    std::filesystem::path current_path = std::filesystem::current_path();
-    std::filesystem::path parent_path = current_path.parent_path();
-		 	
 	Shader pontinho(parent_path.string() + "/shaders/pontinho_1.vert", parent_path.string() + "/shaders/pontinho_1.frag");
 	glGenVertexArrays(numVAOs, vao);
 	glBindVertexArray(vao[0]);
@@ -67,6 +81,8 @@ int main(int arc, char *argv[])
 	Shader pontinho2(parent_path.string() + "/shaders/pontinho_2.vert", parent_path.string() + "/shaders/pontinho_2.frag");
 	glGenVertexArrays(numVAOs, vao2);
 	glBindVertexArray(vao2[0]);
+
+	checkOpenGLError();
 
 	cout << pontinho.program << endl;
 	cout << pontinho2.program << endl;
@@ -80,7 +96,7 @@ int main(int arc, char *argv[])
 		glDrawArrays(GL_POINTS, 0, 1);
 
 		pontinho2.UseProgram();
-		glDrawArrays(GL_POINTS, 0, 1);
+		glDrawArrays(GL_TRIANGLES, 0, 1);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

@@ -1,8 +1,7 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <sstream>
-#include <fstream>  
-
+#include <fstream>
 
 // A simple class i created to facilitate creating my shaders, programs for multiple objects
 class Shader
@@ -17,7 +16,6 @@ public:
         GLuint vertex = this->createShader(vertexSource.c_str(), GL_VERTEX_SHADER, "VERTEX");
         GLuint fragment = this->createShader(fragmentSource.c_str(), GL_FRAGMENT_SHADER, "FRAGMENT");
         this->createProgram(vertex, fragment);
-
     }
 
     // loads the program containing the shaders into the opengl pipeline stages (onto the GPU)
@@ -39,13 +37,27 @@ private:
         return shader;
     }
 
-    std::string loadSource(const std::string& path)
+    std::string loadSource(const std::string &path)
     {
         std::ifstream in(path);
         std::stringstream buffer;
         buffer << in.rdbuf();
         return buffer.str();
-        
+    }
+
+    // 2nd optional function to read the source code of shaders in a text file
+    std::string readShaderSource(const char *filePath)
+    {
+        std::string content;
+        std::ifstream fileStream(filePath, std::ios::in);
+        std::string line = "";
+        while (!fileStream.eof())
+        {
+            getline(fileStream, line);
+            content.append(line + "\n");
+        }
+        fileStream.close();
+        return content;
     }
 
     GLuint createProgram(GLuint vertex, GLuint fragment)
@@ -70,7 +82,7 @@ private:
         {
             glGetProgramInfoLog(program, 1024, NULL, infoLog);
             std::cout << "ERROR::PROGRAM::\n"
-                      << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+                      << infoLog << "\n -- " << std::endl;
         }
     }
 
@@ -83,7 +95,7 @@ private:
         {
             glGetShaderInfoLog(shader, 1024, NULL, infoLog);
             std::cout << "ERROR::: " << type << "\n"
-                      << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+                      << infoLog << "\n -- " << std::endl;
         }
     }
 };
