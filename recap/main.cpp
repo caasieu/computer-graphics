@@ -28,7 +28,6 @@ void init(GLFWwindow *window)
 void display(GLFWwindow *window, double currentTime)
 {
 
-	glPointSize(30.0f);
 	glClear(GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.0, 0.0, 0.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -78,15 +77,34 @@ int main(int arc, char *argv[])
 
 	Utils::checkOpenGLError();
 
+	//float allowed_size = 0.0f;
+	//glGetFloatv(GL_POINT_SIZE_RANGE, &allowed_size);
+	//cout<<"maximum allowed size for a point:" << allowed_size << endl;
+
 	cout << pontinho.program << endl;
 	cout << pontinho2.program << endl;
+
+
+	// point size increase
+	float point_size = 1.0f;
+	float point_size_inc = 1.0f;
 
 	// loop until the user closes the window
 	while (!glfwWindowShouldClose(window))
 	{
+
+		glPointSize(point_size);
 		display(window, glfwGetTime());
+		
 
 		pontinho.UseProgram();
+
+
+		point_size += point_size_inc;
+		if(point_size > 50.0f) point_size_inc = -0.5f;
+		if(point_size < -50.0f) point_size_inc = 0.5f;
+
+
 		x += inc;
 		if(x > 0.95f) inc = -0.01f;
 		if(x < -0.95f) inc = 0.01f;
