@@ -129,6 +129,30 @@ recap/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/recap.dir/build.make CMakeFiles/recap.dir/build
 .PHONY : recap/fast
 
+Utils.o: Utils.cpp.o
+.PHONY : Utils.o
+
+# target to build an object file
+Utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/recap.dir/build.make CMakeFiles/recap.dir/Utils.cpp.o
+.PHONY : Utils.cpp.o
+
+Utils.i: Utils.cpp.i
+.PHONY : Utils.i
+
+# target to preprocess a source file
+Utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/recap.dir/build.make CMakeFiles/recap.dir/Utils.cpp.i
+.PHONY : Utils.cpp.i
+
+Utils.s: Utils.cpp.s
+.PHONY : Utils.s
+
+# target to generate assembly for a file
+Utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/recap.dir/build.make CMakeFiles/recap.dir/Utils.cpp.s
+.PHONY : Utils.cpp.s
+
 glad.o: glad.c.o
 .PHONY : glad.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... recap"
+	@echo "... Utils.o"
+	@echo "... Utils.i"
+	@echo "... Utils.s"
 	@echo "... glad.o"
 	@echo "... glad.i"
 	@echo "... glad.s"

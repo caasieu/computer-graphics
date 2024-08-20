@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 project(recap)
 
-add_executable(recap main.cpp glad.c)
+add_executable(recap main.cpp glad.c Utils.cpp)
 
 target_include_directories(recap PRIVATE include)
 

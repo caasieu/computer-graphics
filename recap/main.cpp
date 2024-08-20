@@ -4,6 +4,7 @@
 #include <GLFW/glfw3.h>
 #include <SOIL2/SOIL2.h>
 #include <filesystem>
+#include "include/classes/Utils.h"
 
 // HardCode a vertex shader
 #define numVAOs 1		 // Vertex Array Object
@@ -13,19 +14,7 @@ GLuint vao2[numVAOs];
 
 using namespace std;
 
-bool checkOpenGLError()
-{
-	bool foundError = false;
-	int glErr = glGetError();
-	while (glErr != GL_NO_ERROR)
-	{
-		cout << "glError: " << glErr << endl;
-		foundError = true;
-		glErr = glGetError();
-	}
 
-	return foundError;
-}
 
 void init(GLFWwindow *window)
 {
@@ -39,7 +28,8 @@ void init(GLFWwindow *window)
 void display(GLFWwindow *window, double currentTime)
 {
 
-	glPointSize(120.0f);
+	glPointSize(30.0f);
+	glClear(GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.0, 0.0, 0.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
@@ -74,6 +64,10 @@ int main(int arc, char *argv[])
 	std::filesystem::path current_path = std::filesystem::current_path();
 	std::filesystem::path parent_path = current_path.parent_path();
 
+
+	float x = 0.0f;
+	float inc = 0.01f;
+
 	Shader pontinho(parent_path.string() + "/shaders/pontinho_1.vert", parent_path.string() + "/shaders/pontinho_1.frag");
 	glGenVertexArrays(numVAOs, vao);
 	glBindVertexArray(vao[0]);
@@ -82,7 +76,7 @@ int main(int arc, char *argv[])
 	glGenVertexArrays(numVAOs, vao2);
 	glBindVertexArray(vao2[0]);
 
-	checkOpenGLError();
+	Utils::checkOpenGLError();
 
 	cout << pontinho.program << endl;
 	cout << pontinho2.program << endl;
@@ -93,6 +87,11 @@ int main(int arc, char *argv[])
 		display(window, glfwGetTime());
 
 		pontinho.UseProgram();
+		x += inc;
+		if(x > 0.95f) inc = -0.01f;
+		if(x < -0.95f) inc = 0.01f;
+		GLuint offsetLoc = glGetUniformLocation(pontinho.program, "offset");
+		glProgramUniform1f(pontinho.program, offsetLoc, x);
 		glDrawArrays(GL_POINTS, 0, 1);
 
 		pontinho2.UseProgram();

@@ -1,7 +1,8 @@
-CMakeFiles/recap.dir/main.cpp.o: \
- /home/caasieu/Documentos/graphics/recap/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/recap.dir/Utils.cpp.o: \
+ /home/caasieu/Documentos/graphics/recap/Utils.cpp \
+ /usr/include/stdc-predef.h \
+ /home/caasieu/Documentos/graphics/recap/include/classes/Utils.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -154,30 +155,4 @@ CMakeFiles/recap.dir/main.cpp.o: \
  /home/caasieu/Documentos/graphics/recap/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/caasieu/Documentos/graphics/recap/include/classes/Shader.h \
- /usr/include/c++/13/sstream /usr/include/c++/13/bits/sstream.tcc \
- /usr/include/c++/13/fstream /usr/include/c++/13/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc /usr/include/GLFW/glfw3.h \
- /usr/local/include/SOIL2/SOIL2.h /usr/include/c++/13/filesystem \
- /usr/include/c++/13/bits/fs_fwd.h /usr/include/c++/13/cstdint \
- /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
- /usr/include/c++/13/limits /usr/include/c++/13/ctime \
- /usr/include/c++/13/bits/parse_numbers.h \
- /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
- /usr/include/c++/13/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/13/bits/locale_facets_nonio.tcc \
- /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
- /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/codecvt \
- /usr/include/c++/13/ext/concurrence.h \
- /usr/include/c++/13/bits/shared_ptr.h \
- /usr/include/c++/13/bits/shared_ptr_base.h \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/bits/unique_ptr.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
- /home/caasieu/Documentos/graphics/recap/include/classes/Utils.h
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h
