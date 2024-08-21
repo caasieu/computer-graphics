@@ -2,6 +2,7 @@
 #include <glad/glad.h>
 #include <sstream>
 #include <fstream>
+#include <filesystem>
 
 // A simple class i created to facilitate creating my shaders, programs for multiple objects
 class Shader
@@ -10,8 +11,13 @@ public:
     GLuint program;
     Shader(const std::string &vPath, const std::string &fPath)
     {
-        std::string vertexSource = this->loadSource(vPath);
-        std::string fragmentSource = this->loadSource(fPath);
+
+	    // Get the current path of the project
+	    std::filesystem::path current_path = std::filesystem::current_path();
+	    std::filesystem::path parent_path = current_path.parent_path();
+
+        std::string vertexSource = this->loadSource(parent_path.string() + vPath);
+        std::string fragmentSource = this->loadSource(parent_path.string() + fPath);
 
         GLuint vertex = this->createShader(vertexSource.c_str(), GL_VERTEX_SHADER, "VERTEX");
         GLuint fragment = this->createShader(fragmentSource.c_str(), GL_FRAGMENT_SHADER, "FRAGMENT");
