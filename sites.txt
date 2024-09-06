@@ -1,2 +1,4 @@
 1. https://gamedev.net/;
 2. http://gameprogrammingpatterns.com/game-loop.html
+3. https://mundoeducacao.uol.com.br/matematica/radiano.htm
+4. http://learnwebgl.brown37.net/index.html

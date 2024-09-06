@@ -5,7 +5,7 @@
 class Utils {
     public:
         static bool checkOpenGLError();
-        static void initWindow();
+        static void clearWindow();
 };
 
 #endif

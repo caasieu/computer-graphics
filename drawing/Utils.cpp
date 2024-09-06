@@ -3,7 +3,8 @@
 #include <iostream>
 #include <glad/glad.h>
 
-bool Utils::checkOpenGLError(){
+bool Utils::checkOpenGLError()
+{
     bool foundError = false;
     int glErr = glGetError();
     while (glErr != GL_NO_ERROR)
@@ -16,10 +17,13 @@ bool Utils::checkOpenGLError(){
     return foundError;
 }
 
-void Utils::initWindow() {
+void Utils::clearWindow()
+{
 
     glClear(GL_DEPTH_BUFFER_BIT);
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
 }
