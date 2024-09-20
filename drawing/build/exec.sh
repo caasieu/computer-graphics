@@ -1,3 +1,3 @@
 make
 ./drawing
-clear
+#clear
