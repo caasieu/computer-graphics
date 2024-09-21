@@ -115,11 +115,7 @@ void display(GLFWwindow *window, Shader *shader, double currentTime)
     {
         tf = currentTime + i;
         // use current time to compute different translations in x, y, and z
-        tMat = glm::translate(
-            glm::mat4(1.0f),
-            glm::vec3(sin(0.35f * tf) * 8.0f,
-                      cos(0.52f * tf) * 8.0f,
-                      sin(0.70f * tf) * 8.0f));
+        tMat = glm::translate( glm::mat4(1.0f), glm::vec3(sin(0.35f * tf) * 8.0f, cos(0.52f * tf) * 8.0f, sin(0.70f * tf) * 8.0f));
 
         // the 1.75 adjusts the rotation speed
         rMat = glm::rotate(glm::mat4(1.0f), 1.75f * tf, glm::vec3(0.0f, 1.0f, 0.0f));
@@ -154,8 +150,7 @@ void display(GLFWwindow *window, Shader *shader, double currentTime)
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 
     GLFWwindow *window;
     if (!glfwInit())

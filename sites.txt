@@ -2,3 +2,6 @@
 2. http://gameprogrammingpatterns.com/game-loop.html
 3. https://mundoeducacao.uol.com.br/matematica/radiano.htm
 4. http://learnwebgl.brown37.net/index.html
+5. https://jsfiddle.net/v98k6oze/
+6. https://threejs.org/examples/#webgl_animation_keyframes
+7. https://www.khronos.org/machine-learning
