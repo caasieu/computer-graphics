@@ -102,14 +102,15 @@ void display(GLFWwindow *window, Shader *shader, double currentTime) {
     glDepthFunc(GL_LEQUAL);
     glDrawArrays(GL_TRIANGLES, 0, 18);
 
-    // Draw the cube
-    mMatrix = glm::translate(glm::mat4(1.0), glm::vec3(3.0f, 3.0f, 0.0f));
+
+    mMatrix = glm::translate(glm::mat4(1.0), glm::vec3(-3.0f, 2.0f, 0.0f));
     mvMatrix = vMatrix * mMatrix; 
 
     // copy pespective and MV matrices to corresponding uniform variables
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(pMatrix));
     glUniformMatrix4fv(mvLoc, 1, GL_FALSE, glm::value_ptr(mvMatrix));
-
+    
+    // Draw the cube
     glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
     glEnableVertexAttribArray(0);

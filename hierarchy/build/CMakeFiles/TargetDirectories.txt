@@ -1,0 +1,3 @@
+/home/caasieu/Documentos/graphics/hierarchy/build/CMakeFiles/hierarchy.dir
+/home/caasieu/Documentos/graphics/hierarchy/build/CMakeFiles/edit_cache.dir
+/home/caasieu/Documentos/graphics/hierarchy/build/CMakeFiles/rebuild_cache.dir
